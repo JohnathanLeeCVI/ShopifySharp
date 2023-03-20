@@ -67,6 +67,14 @@ namespace ShopifySharp
         public string CustomerSelection { get; set; }
 
         /**
+         * The minimum number of items for the price rule to be applicable.
+         *
+         * Only accepts <see cref="PrerequisiteValueRange.GreaterThanOrEqualTo"/>.
+         */
+        [JsonProperty("prerequisite_quantity_range")]
+        public PrerequisiteValueRange PrerequisiteQuantityRange { get; set; }
+
+        /**
         * Prerequisite cart subtotal range.
         */
         [JsonProperty("prerequisite_subtotal_range")]
